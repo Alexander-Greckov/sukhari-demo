@@ -52,25 +52,40 @@
     @extend .inner;
     min-height: 80px;
     display: flex;
-    flex-direction: row; // column on mobile phones
+    justify-content: space-between;
+    // flex-direction: column on mobile phones
+    text-transform: uppercase;
 
     &-logo {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%; // On mb devices
+    }
+
+    &-menu {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+        & li {
+            margin-right: 37px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
     }
 }
 
-.hamburger-menu {
-    cursor: pointer;
-    display: block;
-    height: 24px;
-    width: 24px;
-    background-color: yellow;
+.he-active {
+    position: relative;
 }
 
-
-.header-logo {
-    
-}
+// .hamburger-menu {
+//     cursor: pointer;
+//     display: none;
+//     height: 40px;
+//     width: 40px;
+//     background-color: yellow;
+// }

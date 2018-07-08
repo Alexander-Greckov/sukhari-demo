@@ -1,10 +1,81 @@
-@media (max-width: 767px) {
-    // .header-line {
-    //     display: none;
-    // }
-
-    .header-cont-logo {
+// Media queries
+@media (min-width: 768px) {
+    .he-active::before {
+        content: '';
+        height: 2px;
         width: 100%;
+        background-color: #ff3c3d;
+        position: absolute;
+        bottom: -7px;
+    }
+
+    .header-cont-menu {
+        display: flex!important;
+    }
+}
+
+@media (max-width: 767px) {
+    .he-active {
+        color: #ff3c3d;
+        font-weight: bold;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+        grid-template-rows: repeat(2, 1fr) 1.2fr repeat(2, 22px);
+        grid-template-areas: "fm"
+                             "fs"
+                             "fl"
+                             "fc"
+                             "fa";
+                            
+        & .footer-menu {
+            line-height: 25px;
+        }
+
+        & .footer-logo,
+        & .footer-author,
+        & .footer-copy {
+            justify-content: center;
+        }
+
+        & .footer-logo {
+            align-items: center;
+        }
+
+        .footer-sn {
+            align-items: center;
+        }
+    }
+
+    .header-cont {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 9px;
+
+        &-logo {
+            width: 100%;
+        }
+
+        &-menu {
+            flex-direction: column;
+            align-items: flex-start;
+            display: none;
+            font-size: 14px;
+
+            & li {
+                padding: 10px 0 10px 8px;
+                border-top: 2px solid #e6e6e6;
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+    }
+    
+    .hamb-menu {
+        display: flex;
     }
 
     .order-steps {

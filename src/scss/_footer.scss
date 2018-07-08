@@ -13,10 +13,9 @@
     @extend .inner;
     display: grid;
     color: white;
-    grid-row-gap: 40px;
-    //justify-content: center;
+    grid-row-gap: 38px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 100px 1fr; // Change
+    grid-template-rows: 1fr 100px 1fr;
     grid-template-areas: "fm fm fm"
                          "fl fs fa"
                          ".  fc  .";
