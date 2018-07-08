@@ -379,6 +379,8 @@ button {
 .order-steps li {
   width: 25%;
   padding: 0 15px;
+  font-weight: lighter;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
