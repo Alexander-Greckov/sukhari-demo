@@ -78,7 +78,7 @@ button {
   outline: none;
 }
 
-.inner, .header-line .line-content, .header-cont-wrapper, .promo-cont, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
+.inner, .header-line .line-content, .header-cont, .promo-cont, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -136,12 +136,11 @@ button {
 mark {
   background-color: transparent;
   color: #ffb643;
-  font-weight: normal;
 }
 
 .page-header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   background-color: white;
   left: 0;
   top: 0;
@@ -191,48 +190,36 @@ mark {
   margin-left: 47px;
 }
 
-.header-cont-wrapper {
+.header-cont {
   min-height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.header-menu {
-  padding: 0;
-  list-style-type: none;
+.header-cont-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: lighter;
-  text-transform: uppercase;
-}
-
-.header-menu-link {
-  margin-left: 37px;
-}
-
-.hd-active {
-  font-weight: normal;
-  position: relative;
-}
-
-.hd-active::before {
-  content: '';
-  background-color: #ff3c3d;
-  position: absolute;
-  height: 2px;
   width: 100%;
-  bottom: -7px;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-color: yellow;
 }
 
 ::-webkit-input-placeholder {
@@ -359,7 +346,7 @@ mark {
   text-align: center;
   font-size: 26px;
   text-align: center;
-  font-weight: normal;
+  font-weight: lighter;
   color: white;
   margin: 51px 0 0 0;
 }
@@ -932,6 +919,9 @@ mark {
 }
 
 @media (max-width: 767px) {
+  .header-cont-logo {
+    width: 100%;
+  }
   .order-steps {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -996,7 +986,7 @@ mark {
 }
 
 @media (max-width: 1139px) {
-  .inner, .header-line .line-content, .header-cont-wrapper, .promo-cont, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
+  .inner, .header-line .line-content, .header-cont, .promo-cont, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
     padding-left: 10px;
     padding-right: 10px;
   }

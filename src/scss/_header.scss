@@ -1,7 +1,7 @@
 // Header block styles
 .page-header {
     width: 100%;
-    position: absolute;
+    position: fixed;
     background-color: white;
     left: 0;
     top: 0;
@@ -48,37 +48,29 @@
 }
 
 // Header content styles
-.header-cont-wrapper {
+.header-cont {
     @extend .inner;
     min-height: 80px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    flex-direction: row; // column on mobile phones
 
-.header-menu {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    font-weight: lighter;
-    text-transform: uppercase;
-
-    &-link {
-        margin-left: 37px;
+    &-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; // On mb devices
     }
 }
 
-.hd-active {
-    font-weight: normal;
-    position: relative;
+.hamburger-menu {
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-color: yellow;
+}
 
-    &::before {
-        content: '';
-        background-color: #ff3c3d;
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        bottom: -7px;
-    }
+
+.header-logo {
+    
 }
