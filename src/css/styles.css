@@ -111,6 +111,17 @@ button {
   font-weight: normal;
 }
 
+.rg-logo::before {
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 19px;
+  position: relative;
+  background-image: url("../img/logo_raccoon.svg");
+  background-repeat: no-repeat;
+  top: 3px;
+}
+
 .page-header {
   width: 100%;
   position: absolute;
@@ -647,6 +658,7 @@ button {
   background-color: #565656;
   margin-top: 111px;
   padding-top: 40px;
+  font-size: 12px;
 }
 
 .footer-inner {
@@ -654,7 +666,8 @@ button {
   color: white;
   grid-row-gap: 40px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "fm fm fm" "fl fs fa" "fl fc fa";
+  grid-template-rows: 1fr 100px 1fr;
+  grid-template-areas: "fm fm fm" "fl fs fa" ".  fc  .";
 }
 
 .footer-inner .fm-inner {
@@ -673,7 +686,6 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  font-size: 12px;
   text-transform: uppercase;
   font-weight: lighter;
 }
@@ -686,7 +698,19 @@ button {
 
 .footer-logo {
   grid-area: fl;
-  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.footer-logo .logo > img {
+  height: 63px;
 }
 
 .footer-sn {
@@ -722,12 +746,20 @@ button {
 
 .footer-author {
   grid-area: fa;
-  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .footer-copy {
   grid-area: fc;
-  background-color: gray;
+  text-align: center;
 }
 
 @media (max-width: 767px) {

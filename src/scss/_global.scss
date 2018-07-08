@@ -58,3 +58,14 @@ button {
     color: $second-accent-color;
     font-weight: normal;
 }
+
+.rg-logo::before {
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 19px;
+    position: relative;
+    background-image: url('../img/logo_raccoon.svg');
+    background-repeat: no-repeat;
+    top: 3px;
+}
