@@ -1,7 +1,7 @@
 // Header block styles
 .page-header {
     width: 100%;
-    position: fixed;
+    position: absolute;
     background-color: white;
     left: 0;
     top: 0;
@@ -12,7 +12,6 @@
 }
 
 // Header line styles
-
 .header-line {
     width: 100%;
     background-color: $accent-color;
@@ -44,6 +43,15 @@
             padding: 0 6px 0 10px;
             margin-left: 47px;
         }
+    }
+}
+
+.sticked-header {
+    position: fixed;
+    border-top: 2px solid $accent-color;
+
+    & .header-line {
+        display: none;
     }
 }
 
@@ -81,11 +89,3 @@
 .he-active {
     position: relative;
 }
-
-// .hamburger-menu {
-//     cursor: pointer;
-//     display: none;
-//     height: 40px;
-//     width: 40px;
-//     background-color: yellow;
-// }
