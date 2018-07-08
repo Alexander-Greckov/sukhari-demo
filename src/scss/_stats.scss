@@ -1,0 +1,14 @@
+// Stats section styles
+.stats {
+    @extend .inner;
+    margin-bottom: 79px;
+    width: 100%;
+    min-height: 168px;
+    background-color: $second-accent-color;
+    display: flex;
+    flex-wrap: wrap;
+
+    & div {
+
+    }
+}

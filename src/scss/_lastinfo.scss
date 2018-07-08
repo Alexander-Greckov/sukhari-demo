@@ -48,6 +48,7 @@
     height: 200px;
     position: relative;
     width: 100%;
+    display: block;
 
     /*
     &:hover .moreinfo-btn {
@@ -132,7 +133,6 @@
     font-size: 12px;
     margin-right: 55px;
     color: #959595;
-    cursor: pointer; // Remove if it is a link
 }
 
 
@@ -144,4 +144,9 @@
 .comments-icon {
     @extend %info-icons;
     background: url('../img/comments.svg') no-repeat 0 -1px;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

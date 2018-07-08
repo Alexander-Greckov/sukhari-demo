@@ -78,7 +78,7 @@ button {
   outline: none;
 }
 
-.inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .last-info .info-blocks {
+.inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .stats, .last-info .info-blocks {
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -415,6 +415,18 @@ button {
   font-weight: bold;
 }
 
+.stats {
+  margin-bottom: 79px;
+  width: 100%;
+  min-height: 168px;
+  background-color: #ff635c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .last-info {
   width: 100%;
   margin-bottom: 79px;
@@ -468,6 +480,7 @@ button {
   height: 200px;
   position: relative;
   width: 100%;
+  display: block;
   /*
     &:hover .moreinfo-btn {
         visibility: visible;
@@ -558,7 +571,6 @@ button {
   font-size: 12px;
   margin-right: 55px;
   color: #959595;
-  cursor: pointer;
 }
 
 .calendar-icon {
@@ -567,6 +579,11 @@ button {
 
 .comments-icon {
   background: url("../img/comments.svg") no-repeat 0 -1px;
+  cursor: pointer;
+}
+
+.comments-icon:hover {
+  text-decoration: underline;
 }
 
 .page-footer {
@@ -605,7 +622,7 @@ button {
 }
 
 @media (max-width: 1139px) {
-  .inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .last-info .info-blocks {
+  .inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .stats, .last-info .info-blocks {
     padding: 0 10px;
   }
 }
