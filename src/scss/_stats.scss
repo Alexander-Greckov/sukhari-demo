@@ -3,12 +3,39 @@
     @extend .inner;
     margin-bottom: 79px;
     width: 100%;
-    min-height: 168px;
     background-color: $second-accent-color;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    // flex-basis: 25%;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    padding: 30px 0 24px 0;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
 
-    & div {
+    &-elem {
+        width: calc(100% / 12 * 3);
+        border-left: 1px solid white; 
+        padding: 0 10px 13px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
+    &-elem:first-child {
+        border: none;
+    }
+
+    &-heading {
+        margin: 0 0 32px;
+        font-size: 18px;
+    }
+
+    &-val {
+        margin: 0;
+        font-size: 46px;
     }
 }

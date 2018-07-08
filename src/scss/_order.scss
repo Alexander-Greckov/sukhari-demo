@@ -16,6 +16,14 @@
         list-style-type: none;
         position: relative;
 
+        & a {
+            color: #00c3db;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
         &::before {
             content: '';
             position: absolute;
