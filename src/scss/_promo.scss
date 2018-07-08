@@ -10,7 +10,7 @@
     margin-top: 106px;
     width: 100%;
     background: $page-bg-color url('../img/banner.jpg') no-repeat center/cover;
-    padding-bottom: 85px;
+    padding-bottom: 95px;
     padding-top: 61px;
 
     &-down-arrow {
@@ -26,7 +26,7 @@
 
     &-cont {
         @extend .inner;
-        min-height: calc(100vh - 106px - 85px - 61px);
+        min-height: calc(100vh - 106px - 95px - 61px);
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -110,7 +110,6 @@
     &-img {
         max-width: 61px;
         margin: 0 auto;
-        border-bottom: 2px solid $accent-color;
         padding-bottom: 21px;
 
         & a {
@@ -128,4 +127,16 @@
         text-align: center;
         margin: 29px 0 0 0;
     }
+}
+
+.descr-su {
+    border-bottom: 2px solid #00c4ef;
+}
+
+.descr-ha {
+    border-bottom: 2px solid $accent-color;
+}
+
+.descr-ri {
+    border-bottom: 2px solid $second-accent-color;
 }

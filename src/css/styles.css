@@ -264,7 +264,7 @@ mark {
   margin-top: 106px;
   width: 100%;
   background: #f0f0f0 url("../img/banner.jpg") no-repeat center/cover;
-  padding-bottom: 85px;
+  padding-bottom: 95px;
   padding-top: 61px;
 }
 
@@ -283,7 +283,7 @@ mark {
 }
 
 .promo-cont {
-  min-height: calc(100vh - 106px - 85px - 61px);
+  min-height: calc(100vh - 106px - 95px - 61px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,7 +381,6 @@ mark {
 .promo-descr-img {
   max-width: 61px;
   margin: 0 auto;
-  border-bottom: 2px solid #f5ae2c;
   padding-bottom: 21px;
 }
 
@@ -398,6 +397,18 @@ mark {
 .promo-descr-text {
   text-align: center;
   margin: 29px 0 0 0;
+}
+
+.descr-su {
+  border-bottom: 2px solid #00c4ef;
+}
+
+.descr-ha {
+  border-bottom: 2px solid #f5ae2c;
+}
+
+.descr-ri {
+  border-bottom: 2px solid #ff635c;
 }
 
 .prop {
@@ -962,6 +973,25 @@ mark {
   }
   .stats-heading {
     margin: 45px 0;
+  }
+}
+
+@media (max-width: 579px) {
+  .promo-descr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .promo-descr-item {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .promo-heading {
+    font-size: 20px;
   }
 }
 
