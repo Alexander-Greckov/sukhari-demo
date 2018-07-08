@@ -345,7 +345,7 @@ button {
 }
 
 .order {
-  margin-bottom: 200px;
+  margin-bottom: 82px;
 }
 
 .order-heading {
@@ -396,6 +396,8 @@ button {
   content: counter(stepsCounter);
   font-size: 22px;
   color: #f5ae2c;
+  margin-bottom: 20px;
+  cursor: pointer;
   height: 50px;
   width: 50px;
   border: 5px solid #f5ae2c;
@@ -447,7 +449,7 @@ button {
   margin: 0 0 23px 0;
 }
 
-/* 
+/* Hover button on image
 .moreinfo-btn {
     @include gen-bt-styles(white, 10px 22px 10px 17px, #1c1c1c);
     position: absolute;
@@ -544,7 +546,7 @@ button {
   min-width: 180px;
   position: absolute;
   left: 32px;
-  bottom: 21px;
+  bottom: 20px;
 }
 
 .calendar-icon, .comments-icon {

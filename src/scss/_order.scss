@@ -1,7 +1,7 @@
 // Order block styles
 .order {
     @extend .inner;
-    margin-bottom: 200px; // 82
+    margin-bottom: 82px;
 
     &-heading {
         margin: 0 0 41px 0;
@@ -42,6 +42,8 @@
                 content: counter(stepsCounter);
                 font-size: 22px;
                 color: $accent-color;
+                margin-bottom: 20px;
+                cursor: pointer;
                 height: 50px;
                 width: 50px;
                 border: 5px solid $accent-color;
