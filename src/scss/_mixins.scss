@@ -1,0 +1,25 @@
+@mixin add-file-font($name, $base_path, $type, $ital: normal) {
+    @font-face {
+        font-family: $name;
+        src: url($base_path + '.woff2') format('woff2'),
+             url($base_path + '.woff') format('woff');
+        font-weight: $type;
+        font-style: $ital;
+    }
+}
+
+
+@mixin gen-bt-styles($color, $paddings, $border-color, $bg: transparent,
+                     $br: 4px, $border-size: 2px, $fw: lighter) {
+    
+    text-transform: uppercase;
+    border: 2px solid $border-color;
+    color: $color;
+    display: block;
+    padding: $paddings;
+    font-weight: $fw;
+    background-color: $bg;
+    border-radius: $br;
+    // cursor: pointer;
+    transition: all .2s linear;
+}

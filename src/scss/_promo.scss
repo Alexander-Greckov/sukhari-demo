@@ -1,0 +1,22 @@
+// Promo block styles
+.promo {
+    position: relative;
+    margin-top: 106px;
+    width: 100%;
+    background: $page-bg-color url('../img/banner.jpg') no-repeat center/cover;
+    &-down-arrow {
+        height: 41px;
+        width: 32px;
+        background-image: url('../img/down_arrow.svg');
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        animation: moving-down-arrow 2.5s linear infinite;
+        transform: translateX(-50%);
+    }
+
+    &-content {
+        @extend .inner;
+        min-height: calc(100vh - 106px);
+    }
+}

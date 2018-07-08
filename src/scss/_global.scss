@@ -1,0 +1,50 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font: $font-size 'Roboto', Arial, sans-serif;
+    color: $font-color;
+}
+
+body {
+    background-color: $page-bg-color;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+}
+
+.inner {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: block;
+}
+
+
+.dashed-around {
+    padding: 2px;
+    border: 2px dashed #28c6dd;
+    border-radius: 50%;
+}
+
+.zoom {
+    width: 20px;
+    height: 20px;
+    margin: 18px auto 0 auto;
+    background-image: url('../img/zoom.svg');
+    display: block;
+}

@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+    .header-line {
+        display: none;
+    }
+}
+
+@media (max-width: 1139px) {
+    .inner {
+        //padding: 0 10px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .last-info .info-blocks {
+        justify-content: space-around;
+    }
+}

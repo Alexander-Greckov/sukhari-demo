@@ -1,0 +1,95 @@
+// Propositions block styles
+.prop {
+    @extend .inner;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 36px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+
+    &-elem {
+        max-width: 267px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        //justify-content: center;
+    }
+
+    &-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00c3db;
+        height: 119px;
+        width: 119px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        & img {
+            width: 46px;
+            height: 46px
+        }
+        
+        &:hover .zoom-area {
+            bottom: -55%;
+        }
+
+    }
+
+    &-heading {
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 47px 0 21px 0;
+        font-size: 20px;
+    }
+
+    &-text {
+        font-size: 16px;
+        color: #868686;
+        text-align: center;
+        margin: 0 0 23px 0;
+    }
+
+    &-diff {
+        .prop-heading {
+            text-align: center;
+            text-transform: none;
+        }
+
+        // Comment the code from below if you want to change to defaults styles for diff btn
+        .prop-button {
+            background-color: $accent-color;
+            color: white;
+
+            /*&:hover {
+                font-weight: bold;
+
+            }*/
+        }
+    }
+
+    &-button {
+        font-weight: lighter;
+        font-size: 16px;
+        @include gen-bt-styles($accent-color, 10px 32px, $accent-color);
+        
+        &:hover {
+            background-color: $accent-color;
+            color: white;
+        }
+    }
+}
+
+.zoom-area {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: -100%;
+    transition: bottom .4s ease;
+    border-radius: 50%;
+}

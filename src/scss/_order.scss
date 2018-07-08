@@ -1,0 +1,55 @@
+// Order block styles
+.order {
+    @extend .inner;
+    margin-bottom: 200px; // 82
+
+    &-heading {
+        margin: 0 0 41px 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &-steps {
+        display: flex;
+        counter-reset: stepsCounter;
+        padding: 0;
+        list-style-type: none;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 10px;
+            background-color: $accent-color;
+            display: block;
+            top: 20px;
+            z-index: -1;
+            width: 72%;
+            left: 14%;
+        }
+
+        & li {
+            width: 25%;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+
+            &::before {
+                margin: 0 auto;
+                counter-increment: stepsCounter;
+                content: counter(stepsCounter);
+                font-size: 22px;
+                color: $accent-color;
+                height: 50px;
+                width: 50px;
+                border: 5px solid $accent-color;
+                background-color: $page-bg-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-weight: bold;
+            }
+        }
+    }
+}

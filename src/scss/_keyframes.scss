@@ -1,0 +1,14 @@
+// You can add own keyframes here if you want.
+@keyframes moving-down-arrow {
+    from {
+        bottom: 5%;
+    }
+
+    50% {
+        bottom: 3%;
+    }
+
+    to {
+        bottom: 5%;
+    }
+}
