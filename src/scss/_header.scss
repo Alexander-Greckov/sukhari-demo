@@ -1,7 +1,7 @@
 // Header block styles
 .page-header {
     width: 100%;
-    position: fixed;
+    position: absolute;
     background-color: white;
     left: 0;
     top: 0;
@@ -21,6 +21,7 @@
 
     & .line-content {
         @extend .inner;
+        padding: 0;
         display: flex;
         overflow: hidden;
         justify-content: flex-end;
@@ -53,10 +54,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.header-logo img {
-    max-height: 63px;
 }
 
 .header-menu {

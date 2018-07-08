@@ -78,13 +78,18 @@ button {
   outline: none;
 }
 
-.inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .stats, .last-info .info-blocks {
+.inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
   max-width: 1140px;
   margin: 0 auto;
 }
 
 .logo {
   display: block;
+}
+
+.logo img {
+  display: block;
+  max-height: 63px;
 }
 
 .dashed-around {
@@ -101,9 +106,14 @@ button {
   display: block;
 }
 
+.about {
+  color: #ff635c;
+  font-weight: normal;
+}
+
 .page-header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   background-color: white;
   left: 0;
   top: 0;
@@ -122,6 +132,7 @@ button {
 }
 
 .header-line .line-content {
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,10 +174,6 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.header-logo img {
-  max-height: 63px;
 }
 
 .header-menu {
@@ -346,6 +353,7 @@ button {
 
 .order {
   margin-bottom: 82px;
+  overflow-x: hidden;
 }
 
 .order-heading {
@@ -638,12 +646,91 @@ button {
   width: 100%;
   background-color: #565656;
   margin-top: 111px;
+  padding-top: 40px;
+}
+
+.footer-inner {
+  display: grid;
+  color: white;
+  grid-row-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "fm fm fm" "fl fs fa" "fl fc fa";
+}
+
+.footer-inner .fm-inner {
+  max-width: 892px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.footer-menu {
+  grid-area: fm;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-logo {
+  grid-area: fl;
+  background-color: yellow;
+}
+
+.footer-sn {
+  grid-area: fs;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer-sn-elem {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #00c3db;
+  margin: 0 10px;
+}
+
+.footer-sn-elem img {
+  height: 22px;
+}
+
+.footer-author {
+  grid-area: fa;
+  background-color: green;
+}
+
+.footer-copy {
+  grid-area: fc;
+  background-color: gray;
 }
 
 @media (max-width: 767px) {
-  .header-line {
-    display: none;
-  }
   .order-steps {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -689,7 +776,7 @@ button {
 }
 
 @media (max-width: 1139px) {
-  .inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .stats, .last-info .info-blocks {
+  .inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
     padding-left: 10px;
     padding-right: 10px;
   }

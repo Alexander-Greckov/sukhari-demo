@@ -4,4 +4,77 @@
     width: 100%;
     background-color: $footer-bg-color;
     margin-top: 111px;
+    padding-top: 40px;
+}
+
+.footer-inner {
+    @extend .inner;
+    display: grid;
+    color: white;
+    grid-row-gap: 40px;
+    //justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "fm fm fm"
+                         "fl fs fa"
+                         "fl fc fa";
+
+    & .fm-inner {
+        max-width: 892px;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style-type: none;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: lighter;
+    }
+
+}
+
+.footer-menu {
+    grid-area: fm;
+    padding: 0;
+    margin: 0;
+    //justify-content: space-between;
+}
+
+.footer-logo {
+    grid-area: fl;
+    background-color: yellow;
+}
+
+.footer-sn {
+    grid-area: fs;
+    display: flex;
+    justify-content: center;
+
+    &-elem {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $social-media-buttons-bg;
+        margin: 0 10px;
+
+        & img {
+            height: 22px;
+        }
+    }
+}
+
+.footer-author {
+    grid-area: fa;
+    background-color: green;
+}
+
+.footer-copy {
+    grid-area: fc;
+    background-color: gray;
 }

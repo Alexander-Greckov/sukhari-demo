@@ -2,6 +2,7 @@
 .order {
     @extend .inner;
     margin-bottom: 82px;
+    overflow-x: hidden;
 
     &-heading {
         margin: 0 0 41px 0;

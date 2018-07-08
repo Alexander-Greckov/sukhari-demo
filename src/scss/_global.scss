@@ -32,6 +32,11 @@ button {
 
 .logo {
     display: block;
+
+    & img {
+        display: block;
+        max-height: 63px;
+    }
 }
 
 
@@ -47,4 +52,9 @@ button {
     margin: 18px auto 0 auto;
     background-image: url('../img/zoom.svg');
     display: block;
+}
+
+.about {
+    color: $second-accent-color;
+    font-weight: normal;
 }
