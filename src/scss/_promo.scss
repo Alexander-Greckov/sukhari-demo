@@ -1,9 +1,18 @@
 // Promo block styles
+::placeholder {
+    font-size: 12px;
+    font-weight: lighter;
+    color: #e6e6e6;
+}
+
 .promo {
     position: relative;
     margin-top: 106px;
     width: 100%;
     background: $page-bg-color url('../img/banner.jpg') no-repeat center/cover;
+    padding-bottom: 85px;
+    padding-top: 61px;
+
     &-down-arrow {
         height: 41px;
         width: 32px;
@@ -15,8 +24,108 @@
         transform: translateX(-50%);
     }
 
-    &-content {
+    &-cont {
         @extend .inner;
-        min-height: calc(100vh - 106px);
+        min-height: calc(100vh - 106px - 85px - 61px);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        &-inner {
+            height: 100%; // Remove
+            max-width: 944px;
+            margin: 0 auto;
+            flex-basis: 100%;
+        }
+    }
+}
+
+.search-course {
+    width: 100%;
+    min-height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+    border: 1px solid white;
+    display: flex;
+    padding-left: 20px;
+
+    & button[type="submit"] {
+        height: 38px;
+        width: 20px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        margin-left: 5px;
+
+        &::before {
+            content: '';
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            background-image: url('../img/search_icon.svg');
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.search-field {
+    width: calc(100% - 45px);
+    padding-bottom: 2px;
+    
+    & input[type="text"] {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        height: 36px;
+        width: 100%;
+        color: #e6e6e6;
+        font-size: 16px;
+        font-weight: lighter;
+    }
+}
+
+.promo-heading {
+    text-align: center;
+    font-size: 26px;
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    margin: 51px 0 0 0;
+}
+
+.promo-descr {
+    width: 100%;
+    margin-top: 54px;
+    display: flex;
+    color: white;
+
+    &-item {
+        width: calc(100% / 12 * 4);
+        padding: 0 15px;
+    }
+
+    &-img {
+        max-width: 61px;
+        margin: 0 auto;
+        border-bottom: 2px solid $accent-color;
+        padding-bottom: 21px;
+
+        & a {
+            display: block;
+
+            & img {
+                display: block;
+                width: 61px;
+                height: 61px;
+            }
+        }
+    }
+
+    &-text {
+        text-align: center;
+        margin: 29px 0 0 0;
     }
 }

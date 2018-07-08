@@ -78,7 +78,7 @@ button {
   outline: none;
 }
 
-.inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
+.inner, .header-line .line-content, .header-cont-wrapper, .promo-cont, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -120,6 +120,23 @@ button {
   background-image: url("../img/logo_raccoon.svg");
   background-repeat: no-repeat;
   top: 3px;
+}
+
+.search-icon {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/search_icon.svg");
+}
+
+.text-logo {
+  font-weight: normal;
+}
+
+mark {
+  background-color: transparent;
+  color: #ffb643;
+  font-weight: normal;
 }
 
 .page-header {
@@ -218,11 +235,37 @@ button {
   bottom: -7px;
 }
 
+::-webkit-input-placeholder {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #e6e6e6;
+}
+
+:-ms-input-placeholder {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #e6e6e6;
+}
+
+::-ms-input-placeholder {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #e6e6e6;
+}
+
+::placeholder {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #e6e6e6;
+}
+
 .promo {
   position: relative;
   margin-top: 106px;
   width: 100%;
   background: #f0f0f0 url("../img/banner.jpg") no-repeat center/cover;
+  padding-bottom: 85px;
+  padding-top: 61px;
 }
 
 .promo-down-arrow {
@@ -239,8 +282,122 @@ button {
   transform: translateX(-50%);
 }
 
-.promo-content {
-  min-height: calc(100vh - 106px);
+.promo-cont {
+  min-height: calc(100vh - 106px - 85px - 61px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.promo-cont-inner {
+  height: 100%;
+  max-width: 944px;
+  margin: 0 auto;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.search-course {
+  width: 100%;
+  min-height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 7px;
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20px;
+}
+
+.search-course button[type="submit"] {
+  height: 38px;
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-left: 5px;
+}
+
+.search-course button[type="submit"]::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  background-image: url("../img/search_icon.svg");
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.search-field {
+  width: calc(100% - 45px);
+  padding-bottom: 2px;
+}
+
+.search-field input[type="text"] {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  height: 36px;
+  width: 100%;
+  color: #e6e6e6;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.promo-heading {
+  text-align: center;
+  font-size: 26px;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  margin: 51px 0 0 0;
+}
+
+.promo-descr {
+  width: 100%;
+  margin-top: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+}
+
+.promo-descr-item {
+  width: calc(100% / 12 * 4);
+  padding: 0 15px;
+}
+
+.promo-descr-img {
+  max-width: 61px;
+  margin: 0 auto;
+  border-bottom: 2px solid #f5ae2c;
+  padding-bottom: 21px;
+}
+
+.promo-descr-img a {
+  display: block;
+}
+
+.promo-descr-img a img {
+  display: block;
+  width: 61px;
+  height: 61px;
+}
+
+.promo-descr-text {
+  text-align: center;
+  margin: 29px 0 0 0;
 }
 
 .prop {
@@ -658,6 +815,7 @@ button {
   background-color: #565656;
   margin-top: 111px;
   padding-top: 40px;
+  padding-bottom: 36px;
   font-size: 12px;
 }
 
@@ -808,7 +966,7 @@ button {
 }
 
 @media (max-width: 1139px) {
-  .inner, .header-line .line-content, .header-cont-wrapper, .promo-content, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
+  .inner, .header-line .line-content, .header-cont-wrapper, .promo-cont, .prop, .order, .stats, .last-info .info-blocks, .footer-inner {
     padding-left: 10px;
     padding-right: 10px;
   }
